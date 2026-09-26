@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Uploader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Image Uploader</h1>
+
+        <div id="dropArea" class="drop-area">
+            <p>Drag & Drop an image here</p>
+            <p>or</p>
+
+            <label for="fileInput" class="choose-btn">
+                Choose Image
+            </label>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".jpg,.jpeg,.png,.gif"
+                hidden
+            >
+
+            <p class="file-types">
+                JPG, PNG, GIF only
+            </p>
+        </div>
+
+        <p id="errorMessage" class="error"></p>
+
+        <div id="previewContainer" class="preview-container">
+            <h2>Preview</h2>
+
+            <img id="previewImage" src="" alt="Image Preview">
+
+            <p id="fileName"></p>
+        </div>
+
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar">
+                0%
+            </div>
+        </div>
+
+        <p id="uploadStatus"></p>
+
+        <button id="uploadBtn" class="upload-btn">
+            Upload
+        </button>
+
+        <button id="clearBtn" class="clear-btn">
+            Clear Saved Image
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
